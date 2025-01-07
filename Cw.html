@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Intro to Js</title>
+</head>
+
+<body>
+
+    <h1 id="h1">Hello World</h1><br><br>
+    <button onclick="buttonClick();">Style Me!</button><br><br>
+    <button onclick="myalert();">Get Alert</button><br><br>
+    <button onclick="myinput();">Customize Message </button><br><br>
+    <button onclick="myconfirmation();">Exit </button>
+    <script>
+        function buttonClick() {
+            const h1 = document.getElementById("h1");
+            h1.textContent = "You Clicked the button";
+
+            // Changing background color
+            document.body.style.backgroundColor = "aqua";
+
+            //changing text color
+            h1.style.color = "red";
+
+
+        }
+
+        function myalert() {
+            alert("You clicked on alert message");
+        }
+
+        function myinput() {
+            var name = prompt("Enter your name");
+            h1.textContent = "Hello " + name;
+        }
+
+        function myconfirmation() {
+            if (confirm("Are you sure you want to exit?")) {
+                alert("You clicked on exit");
+            } else {
+                alert("You clicked on cancel");
+            }
+        }
+    </script>
+</body>
+
+</html>
